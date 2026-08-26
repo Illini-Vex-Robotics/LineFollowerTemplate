@@ -592,7 +592,8 @@
       }
     },
     "upload_options": {
-      "description": "My PROS Project"
+      "description": "Prog Onboarding Project",
+      "icon": "clawbot"
     },
     "use_early_access": false
   }
