@@ -12,6 +12,14 @@ void opControl() {
 	while (runTimer) {
 		/*
 		--------YOUR LOGIC HERE--------
+
+		Provided helper functions:
+		- getLeftOptical()
+		- getRightOptical()
+		- setLeftMotor(int power)
+		- setRightMotor(int power)
+
+		Only modify the code in this method
 		*/
 		pros::delay(20); // Runs loop every 20 ms, DO NOT REMOVE
 	}
