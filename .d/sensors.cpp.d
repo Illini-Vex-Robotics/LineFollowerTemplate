@@ -1,11 +1,11 @@
-bin/main.cpp.o: src/main.cpp include/main.h include/api.h include/timer.h \
- include/pros/adi.h include/pros/ai_vision.h include/pros/colors.h \
- include/pros/device.h include/pros/distance.h include/pros/error.h \
- include/pros/ext_adi.h include/pros/adi.h include/pros/adi.h \
- include/pros/gps.h include/pros/imu.h include/pros/link.h \
- include/pros/llemu.h include/liblvgl/llemu.h include/liblvgl/lvgl.h \
- include/liblvgl/lv_version.h include/liblvgl/lvgl_private.h \
- include/liblvgl/core/lv_global.h \
+bin/sensors.cpp.o: src/sensors.cpp include/sensors.h include/api.h \
+ include/timer.h include/pros/adi.h include/pros/ai_vision.h \
+ include/pros/colors.h include/pros/device.h include/pros/distance.h \
+ include/pros/error.h include/pros/ext_adi.h include/pros/adi.h \
+ include/pros/adi.h include/pros/gps.h include/pros/imu.h \
+ include/pros/link.h include/pros/llemu.h include/liblvgl/llemu.h \
+ include/liblvgl/lvgl.h include/liblvgl/lv_version.h \
+ include/liblvgl/lvgl_private.h include/liblvgl/core/lv_global.h \
  include/liblvgl/core/../lv_conf_internal.h \
  include/liblvgl/core/../lv_conf_kconfig.h \
  include/liblvgl/core/../lv_conf.h \
@@ -664,7 +664,7 @@ bin/main.cpp.o: src/main.cpp include/main.h include/api.h include/timer.h \
  include/pros/rotation.hpp include/pros/rotation.h include/pros/rtos.hpp \
  include/pros/screen.hpp include/pros/screen.h include/pros/vision.hpp \
  include/pros/vision.h
-include/main.h:
+include/sensors.h:
 include/api.h:
 include/timer.h:
 include/pros/adi.h:

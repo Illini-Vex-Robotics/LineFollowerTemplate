@@ -1,6 +1,7 @@
 #include "main.h"
 
 bool programKilled = true;
+pros::Controller master(pros::E_CONTROLLER_MASTER);
 
 void initialize() {
 	pros::lcd::initialize();
@@ -14,10 +15,10 @@ void opControl() {
 		--------YOUR LOGIC HERE--------
 
 		Provided helper functions:
-		- getLeftOptical()
-		- getRightOptical()
-		- setLeftMotor(int power)
-		- setRightMotor(int power)
+		- getLeftOptical() - Returns Hue of left color sensor
+		- getRightOptical() - Returns Hue of right color sensor
+		- setLeftMotor(int power) - Sets power of left motor (0-127)
+		- setRightMotor(int power) - Sets power of right motor (0-127)
 
 		Only modify the code in this method
 		*/
