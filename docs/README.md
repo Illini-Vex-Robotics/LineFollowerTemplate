@@ -4,6 +4,10 @@
 
 This repository is the starter template used during onboarding for new members of the Illini VEX Robotics programming team. It's designed to teach the Git workflow we use all year, while giving new members a hands-on introduction to programming logic in the context of robotics.
 
+| | | |
+|---|---|---|
+| ![Photo 1](docs/images/photo1.jpg) | ![Photo 2](docs/images/photo2.jpg) | ![Photo 3](docs/images/photo3.jpg) |
+
 ---
 
 ## About This Activity
@@ -56,13 +60,3 @@ Fastest maze completion times from the onboarding event:
 | 🥉 3 | | | |
 | 4 | | | |
 | 5 | | | |
-
----
-
-## Photos
-
-Our line follower robot and photos from the event:
-
-| | | |
-|---|---|---|
-| ![Photo 1](docs/images/photo1.jpg) | ![Photo 2](docs/images/photo2.jpg) | ![Photo 3](docs/images/photo3.jpg) |
