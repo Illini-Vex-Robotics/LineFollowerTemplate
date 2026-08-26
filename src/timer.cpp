@@ -10,17 +10,23 @@ bool runTimer = false;
 
 void startTimer(void* param) {
     runTimer = true;
+    timerMs = 0;
     while (true) {
         if (master.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A)) {
-            runTimer = !runTimer; 
+            if (runTimer) {
+                stopTimer();
+            } else {
+                startTimer(nullptr);
+            }
         }
         if (runTimer) {
             if (getLeftOptical() < 50 && getRightOptical() < 50) { 
-                runTimer = false;
                 pros::lcd::print(2, "You won in %d.%d sec", timerMs / 1000, timerMs % 1000);
+                runTimer = false;
+            } else {
+                pros::lcd::print(2, "%d.%d sec", timerMs / 1000, timerMs % 1000);
+                timerMs += 20;
             }
-            pros::lcd::print(2, "%d.%d sec", timerMs / 1000, timerMs % 1000);
-            timerMs += 20;
         }
         pros::delay(20); 
     }
@@ -28,4 +34,5 @@ void startTimer(void* param) {
 
 void stopTimer() {
     runTimer = false;
+    timerMs = 0;
 }
