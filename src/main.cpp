@@ -10,6 +10,8 @@ void initialize() {
 }
 
 void opControl() {
+	printSensorValues(); //Delete this before running your line follower logic!
+
 	while (runTimer) {
 		/*
 		--------YOUR LOGIC HERE--------

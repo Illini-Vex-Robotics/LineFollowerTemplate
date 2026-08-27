@@ -8,18 +8,25 @@ pros::Motor right_motor(-10);  // Creates a reversed motor on port 10
 pros::Optical left_optical(19); // Creates an optical sensor on port 19
 pros::Optical right_optical(20); // Creates an optical sensor on port 20
 
-int getLeftOptical() {
-	return left_optical.get_hue();
-}
+pros::c::optical_raw_s_t getLeftOpticalData() {return left_optical.get_raw();}
 
-int getRightOptical() {
-	return right_optical.get_hue();
-}
+pros::c::optical_raw_s_t getRightOpticalData() {return right_optical.get_raw();}
 
-void setLeftMotor(int power) {
-	left_motor.move(power);
-}
+void setLeftMotor(int power) {left_motor.move(power);}
 
-void setRightMotor(int power) {
-	right_motor.move(power);
+void setRightMotor(int power) {right_motor.move(power);}
+
+void printSensorValues() {
+	pros::lcd::clear();
+	while (true) {
+		pros::c::optical_raw_s_t leftData = getLeftOpticalData();
+		pros::c::optical_raw_s_t rightData = getRightOpticalData();
+		
+		pros::lcd::set_text(1, "Red: Left = %d | Right = %d", leftData.red, rightData.red);
+		pros::lcd::set_text(1, "Green: Left = %d | Right = %d", leftData.green, rightData.green);
+		pros::lcd::set_text(1, "Blue: Left = %d | Right = %d", leftData.blue, rightData.blue);
+		pros::lcd::set_text(1, "Clear: Left = %d | Right = %d", leftData.clear, rightData.clear);
+
+		pros::delay(20);
+	}
 }
