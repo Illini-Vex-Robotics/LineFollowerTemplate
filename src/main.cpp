@@ -1,4 +1,5 @@
 #include "main.h"
+#include "sensors.h"
 
 bool programKilled = true;
 pros::Controller master(pros::E_CONTROLLER_MASTER);
@@ -6,10 +7,11 @@ pros::Controller master(pros::E_CONTROLLER_MASTER);
 void initialize() {
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "Line Follower Onboarding Activity");
-	startTimer(nullptr);
+
+	pros::Task timerTask(startTimer);
 }
 
-void opControl() {
+void opcontrol() {
 	printSensorValues(); //Delete this before running your line follower logic!
 
 	while (runTimer) {

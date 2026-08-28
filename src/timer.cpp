@@ -16,15 +16,20 @@ void startTimer(void* param) {
             if (runTimer) {
                 stopTimer();
             } else {
-                startTimer(nullptr);
+                runTimer = true;
+                timerMs = 0;
             }
         }
         if (runTimer) {
-            if (getLeftOptical() < 50 && getRightOptical() < 50) { 
+            if (getLeftOpticalData().blue > 200 && getRightOpticalData().blue > 200) {
+                lcdMutex.take();
                 pros::lcd::print(2, "You won in %d.%d sec", timerMs / 1000, timerMs % 1000);
+                lcdMutex.give();
                 runTimer = false;
             } else {
+                lcdMutex.take();
                 pros::lcd::print(2, "%d.%d sec", timerMs / 1000, timerMs % 1000);
+                lcdMutex.give();
                 timerMs += 20;
             }
         }
