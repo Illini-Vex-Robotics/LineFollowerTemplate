@@ -16,10 +16,10 @@ After setting up VS Code and the PROS extension, new members:
 
 1. Cloned this repository and opened it in VS Code
 2. Received a brief crash course on C++ conditionals and VEX optical sensors
-3. Got a walkthrough of the template's structure and helper methods
+3. Got a walkthrough of the template's structure
 4. Worked in teams to write an algorithm that completes a line-follower maze as fast as possible
 
-The template intentionally handles sensor setup and provides helper methods so new members can focus on:
+The template intentionally handles sensor and timer setup so new members can focus on:
 - Learning the **Git operations** (clone, branch, commit, push, pull) we'll use throughout the season
 - Building **logic and reasoning skills** for programming and robotics, without getting stuck on C++ syntax or the PROS API
 
@@ -27,8 +27,7 @@ The template intentionally handles sensor setup and provides helper methods so n
 
 ## What's Included
 
-- **Sensor object definitions:** VEX optical sensors and motors are preconfigured
-- **Helper methods:** methods to set motor power and read optical sensor data are included
+- **Sensor object definitions:** the VEX optical sensor and motor objects are declared at the top of `main.cpp` — you just fill in the port numbers
 - **Built-in timer**
   - Starts when the **A** button is pressed on the VEX controller
   - Stops automatically upon maze completion
