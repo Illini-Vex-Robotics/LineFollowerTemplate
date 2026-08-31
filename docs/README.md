@@ -44,11 +44,15 @@ The template intentionally handles sensor setup and provides helper methods so n
    git clone <repo-url>
    ```
 3. Open the folder in VS Code
-4. Pull in the PROS kernel and libraries (they aren't committed to this repo):
+4. Pull in the PROS kernel and libraries (they aren't committed to this repo — the
+   versions are listed in `project.pros`):
    ```bash
-   pros c fetch
+   pros c install kernel@4.2.2
+   pros c install liblvgl@9.2.0
    ```
-   or run **PROS: Fetch template** from the VS Code command palette. This creates the `include/` and `firmware/` folders the project needs to build.
+   `pros c fetch` alone only downloads them to the PROS cache; `install` also
+   applies them to the project, creating the `include/` and `firmware/` folders
+   the build needs.
 5. Build and upload to the V5 brain using the PROS extension
 6. Press **A** on the controller to start the timer and begin the run
 
