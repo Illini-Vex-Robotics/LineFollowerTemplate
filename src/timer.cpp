@@ -10,8 +10,7 @@ bool runTimer = false;
 
 static bool seesRed(pros::Optical& sensor) {
     double hue = sensor.get_hue();
-    if (hue < 0.0) return false; // sensor errored / not connected
-    return hue < 15.0;
+    return hue < 20;
 }
 
 void startTimer(void* param) {
