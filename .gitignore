@@ -1,6 +1,4 @@
 /.vscode
 /.d
 /bin
-/firmware
-/include
 compile_commands.json
