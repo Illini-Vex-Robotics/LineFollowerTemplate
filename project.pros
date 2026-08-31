@@ -593,7 +593,8 @@
     },
     "upload_options": {
       "description": "Prog Onboarding Project",
-      "icon": "clawbot"
+      "icon": "clawbot",
+      "slot": 2
     },
     "use_early_access": false
   }
