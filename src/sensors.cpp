@@ -4,10 +4,10 @@
 =-------Set sensor ports, but don't touch anything else in this file---------
 */
 
-pros::Motor left_motor(9); //Add port numbers here
-pros::Motor right_motor(-10); 
-pros::Optical left_optical(19); 
-pros::Optical right_optical(20); 
+pros::Motor left_motor(); //Add port numbers here
+pros::Motor right_motor(); 
+pros::Optical left_optical(); 
+pros::Optical right_optical(); 
 
 void initSensors() {
 	left_optical.set_led_pwm(100);
