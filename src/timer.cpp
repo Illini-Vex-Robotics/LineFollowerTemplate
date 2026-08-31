@@ -23,7 +23,7 @@ void startTimer(void* param) {
             }
         }
         if (runTimer) {
-            if (getLeftOpticalData().blue < 200 && getRightOpticalData().blue < 200) {
+            if (false) {//getLeftOpticalData().blue < 200 && getRightOpticalData().blue < 200
                 snprintf(buf, sizeof(buf), "You won in %d.%03d sec", timerMs / 1000, timerMs % 1000);
                 pros::lcd::set_text(2, buf);
                 runTimer = false;
