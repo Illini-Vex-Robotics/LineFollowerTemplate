@@ -54,17 +54,3 @@ The template intentionally handles sensor and timer setup so new members can foc
    the build needs.
 5. Build and upload to the V5 brain using the PROS extension
 6. Press **A** on the controller to start the timer and begin the run
-
----
-
-## 🏆 Leaderboard
-
-Fastest maze completion times from the onboarding event:
-
-| Rank | Team / Name | Time (s) | Notes |
-|------|-------------|----------|-------|
-| 🥇 1 | | | |
-| 🥈 2 | | | |
-| 🥉 3 | | | |
-| 4 | | | |
-| 5 | | | |
