@@ -6,7 +6,7 @@ This repository is the starter template used during onboarding for new members o
 
 | | | |
 |---|---|---|
-| ![Photo 1](docs/images/photo1.jpg) | ![Photo 2](docs/images/photo2.jpg) | ![Photo 3](docs/images/photo3.jpg) |
+| ![Photo 1](images/photo2.jpeg) | ![Photo 2](images/photo1.jpeg) | ![Photo 3](images/photo3.jpeg) |
 
 ---
 
